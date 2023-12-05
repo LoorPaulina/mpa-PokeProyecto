@@ -11,7 +11,7 @@ export class BuscaPokemonService {
   
 
   //Atributo URL
-  private URL: string = 'https://pokemon.firebaseio.com/collection.json';
+  private URL: string = 'https://pokeproyecto-55afb-default-rtdb.firebaseio.com/collection.json';
   constructor(private http:HttpClient) { }
 
   getResponse() {
