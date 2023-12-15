@@ -1,0 +1,19 @@
+.container-scroller{
+    display: grid;
+    grid-template-areas: "A B B"
+                         "A B B"
+                         "C C C";
+}
+
+app-navbar{
+    grid-area: A;
+}app-biblioteca{
+    grid-area: B;
+}
+
+app-footer{
+    grid-area: C;
+}
+router-outlet{
+    display: none;
+}

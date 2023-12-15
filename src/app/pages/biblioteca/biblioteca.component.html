@@ -1,0 +1,45 @@
+<div class="main-panel">
+    <app-buscador></app-buscador>
+        <div class="cards_conts">
+            @for (datum of data; track datum.pokedex_number) {
+                <div class="flip-card">
+                   <div class="flip-card-inner">
+                       <div class="flip-card-front">
+                           <div class="flip-card-front-inner">
+                               
+                                   <h1 id="pokemon-name">{{datum.percentage_male}} </h1>
+                                           <figure class="pokemon-image-profile">
+                                               <img src="" alt="pokemon" class="pokemon-image-profile-container">
+                                           </figure>
+                                       </div>         
+                                   </div>
+                                   <div class="flip-card-back">
+                                       <div class="flip-card-back-inner">
+                                           <section class="pokemon-information">
+                                               <ul>
+                                                   <li id="peso-pokemon">
+                                                       habilidades: {{datum.abilities}} {{datum.against_bug}}
+                                                   </li>
+                                                   <li id="movimientos-pokemon">
+                                                       generacion: {{datum.height_m}} 
+                                                   </li>
+                                                   <li id="altura-pokemon">
+                                                       altura:  {{datum.hp}} mts
+                                                   </li>
+                                                   <li id="tipo-pokemon">
+                                                       tipo: {{datum.type2}}
+                                                   </li>
+           
+                                               </ul>
+                                           </section>
+                                       </div>   
+                                       
+                                   </div>
+                   </div>
+                </div>
+                }
+        
+          
+   
+</div>
+</div>

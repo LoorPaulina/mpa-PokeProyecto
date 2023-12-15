@@ -27,7 +27,8 @@ export class IndexComponent {
     this.dataProvider.getResponse().subscribe((response) => { 
       let dataArray = (response as Pokemon[]); 
       this.data = dataArray.slice(0,10);
-
+      
+      this.data=this.data.filter(pokemon=>pokemon.name==="Fushigidaneフシギダネ");
       console.log(dataArray.slice(0,10));
     })
   }

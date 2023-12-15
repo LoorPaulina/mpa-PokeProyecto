@@ -1,4 +1,5 @@
 export interface Pokemon {
+  sprites: String
     abilities: string
     against_bug: string
     against_dark: string
@@ -40,5 +41,7 @@ export interface Pokemon {
     type1: string
     type2: string
     weight_kg: string
+    
+    front_default: String
   }
   
