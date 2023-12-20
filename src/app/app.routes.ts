@@ -4,8 +4,8 @@ import { BibliotecaComponent } from './pages/biblioteca/biblioteca.component';
 import { IndexComponent } from './pages/index/index.component';
 
 export const routes: Routes = [
-    { path: '', component: IndexComponent },
+    { path: 'index', component: IndexComponent },
     { path: 'charts', component: ChartsComponent },
     { path: 'biblioteca', component: BibliotecaComponent },
-    { path: "**", redirectTo: '' }
+    { path: "**", redirectTo: 'index' }
 ];
