@@ -13,6 +13,7 @@ app-navbar{
 
 app-footer{
     grid-area: C;
+
 }
 router-outlet{
     display: none;
