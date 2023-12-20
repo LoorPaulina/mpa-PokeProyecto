@@ -1,5 +1,5 @@
 export interface Pokemon {
-  sprites: String
+
     abilities: string
     against_bug: string
     against_dark: string
