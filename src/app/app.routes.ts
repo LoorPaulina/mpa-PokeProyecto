@@ -6,5 +6,6 @@ import { IndexComponent } from './pages/index/index.component';
 export const routes: Routes = [
     { path: '', component: IndexComponent },
     { path: 'charts', component: ChartsComponent },
-    { path: 'biblioteca', component: BibliotecaComponent }
+    { path: 'biblioteca', component: BibliotecaComponent },
+    { path: "**", redirectTo: "index" }
 ];
