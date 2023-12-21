@@ -1,0 +1,13 @@
+#pokemon{
+    height:55%;
+    width: 55%;
+}
+
+#pokemonDelDia, #contribuciones{
+    color: white;
+}
+
+#fotos{
+    height: 45%;
+    width: 45%;
+}

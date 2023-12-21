@@ -10,85 +10,34 @@
             <h5>Este dataset recopila información completa sobre diferentes Pokémon, desde sus estadísticas hasta sus habilidades y evoluciones. Es una herramienta útil para los amantes de Pokémon y para aquellos que desean explorar el fascinante mundo de estas criaturas</h5>
             <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
               <div class="card">
-                <div class="card-body">
+                <div class="card-body" id="pokemonDelDia">
+                  <h5>Pokemon del día</h5>
+                  <p>{{randomPokemon().name}}</p>
                   <div class="row">
-                    <div class="col-9">
-                      <h5>Pokemon del día</h5>
-                      <div class="d-flex align-items-center align-self-start">
-                        <h3 class="mb-0">$12.34</h3>
-                        <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
-                      </div>
+                    <div class="col-9" id="pokemonDelDia">
+                        <figure class="pokemon-image-profile">
+                          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{randomPokemon().sp_attack}}.png" alt="pokemon" class="pokemon-image-profile-container" id="pokemon">
+                        </figure>
+                        <p class="text-success ml-2 mb-0 font-weight-medium"></p>
                     </div>
-                    <div class="col-3">
-                      <div class="icon icon-box-success ">
-                        <span class="mdi mdi-arrow-top-right icon-item"></span>
-                      </div>
                     </div>
                   </div>
-                  <h6 class="text-muted font-weight-normal">Potential growth</h6>
+                  <h6 class="text-muted font-weight-normal">Tipo: {{randomPokemon().type2}}</h6>
                 </div>
               </div>
-            </div>
+            
             <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-9">
-                      <div class="d-flex align-items-center align-self-start">
-                        <h3 class="mb-0">$17.34</h3>
-                        <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="icon icon-box-success">
-                        <span class="mdi mdi-arrow-top-right icon-item"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <h6 class="text-muted font-weight-normal">Revenue current</h6>
-                </div>
+            <div class="card">"
+              <div class="card-body" id="contribuciones">
+                <h5>Contribuciones</h5>
+                <div class="row">
+                <img src="assets/images/dafne.png" alt="Dafne Ruiz" id="fotos">
+                <img src="assets/images/paulina.png" alt="Paulina Loor" id="fotos">
+                <img src="assets/images/andres.png" alt="Andrés Cornejo" id="fotos">
+              </div>
               </div>
             </div>
-            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-9">
-                      <div class="d-flex align-items-center align-self-start">
-                        <h3 class="mb-0">$12.34</h3>
-                        <p class="text-danger ml-2 mb-0 font-weight-medium">-2.4%</p>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="icon icon-box-danger">
-                        <span class="mdi mdi-arrow-bottom-left icon-item"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <h6 class="text-muted font-weight-normal">Daily Income</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-9">
-                      <div class="d-flex align-items-center align-self-start">
-                        <h3 class="mb-0">$31.53</h3>
-                        <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="icon icon-box-success ">
-                        <span class="mdi mdi-arrow-top-right icon-item"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <h6 class="text-muted font-weight-normal">Expense current</h6>
-                </div>
-              </div>
-            </div>
+          </div>
           </div>
           <div class="row">
             <div class="col-md-4 grid-margin stretch-card">
@@ -606,10 +555,14 @@
                                   <th>{{datum.sp_defense}}</th>
                                   
                               </tr>
+
+                              
                             } @empty {
                               <tr>
                                 <td colspan="4" class="text-center">Aún no hay datos</td>
                               </tr>
+
+                             
                             }
                         </tbody>
                     </table>
@@ -619,4 +572,4 @@
               </div>
             </div>
           </div>
-        </div>
+        

@@ -8,6 +8,8 @@ import { Pokemon } from '../../interfaces/pokemon';
 //Importación del servicio
 import { BuscaPokemonService } from '../../providers/busca-pokemon.service';
 
+import { PokemonImg } from '../../interfaces/pokemon-img';
+
 @Component({
   selector: 'app-index',
   standalone: true,
@@ -20,6 +22,12 @@ import { BuscaPokemonService } from '../../providers/busca-pokemon.service';
 })
 export class IndexComponent {
   public data : Pokemon[] = [];
+  public pokemon2!: Pokemon;
+  public i= Math.floor(Math.random() * 11);
+  public url: string="";
+  public listUrls: string[]=[];
+  public datosImg: PokemonImg[]=[];
+  
 
   constructor(private dataProvider: BuscaPokemonService) { }
 
@@ -27,9 +35,21 @@ export class IndexComponent {
     this.dataProvider.getResponse().subscribe((response) => { 
       let dataArray = (response as Pokemon[]); 
       this.data = dataArray.slice(0,10);
-      
       this.data=this.data.filter(pokemon=>pokemon.name==="Fushigidaneフシギダネ");
-      console.log(dataArray.slice(0,10));
     })
-  }
+  }  
+
+  randomPokemon(): Pokemon{ 
+    this.dataProvider.getResponse().subscribe((response) => { 
+      let dataArray = (response as Pokemon[]); 
+      this.pokemon2 = dataArray[this.i];
+      }
+    );
+    return this.pokemon2;
+    }
+
+    
+
+
 }
+
