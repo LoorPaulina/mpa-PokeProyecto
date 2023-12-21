@@ -12,17 +12,16 @@
               <div class="card">
                 <div class="card-body" id="pokemonDelDia">
                   <h5>Pokemon del día</h5>
-                  <p>{{randomPokemon().name}}</p>
+                  <p>{{randomPokemonNombre()}}</p>
                   <div class="row">
                     <div class="col-9" id="pokemonDelDia">
                         <figure class="pokemon-image-profile">
-                          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{randomPokemon().sp_attack}}.png" alt="pokemon" class="pokemon-image-profile-container" id="pokemon">
+                          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{randomPokemonSpAttack()}}.png" alt="pokemon" class="pokemon-image-profile-container" id="pokemon">
                         </figure>
-                        <p class="text-success ml-2 mb-0 font-weight-medium"></p>
                     </div>
                     </div>
                   </div>
-                  <h6 class="text-muted font-weight-normal">Tipo: {{randomPokemon().type2}}</h6>
+                  <h6 class="text-muted font-weight-normal">Tipo: {{randomPokemonTipo()}}</h6>
                 </div>
               </div>
             

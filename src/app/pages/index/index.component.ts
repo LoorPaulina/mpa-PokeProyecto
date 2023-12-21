@@ -22,7 +22,9 @@ import { PokemonImg } from '../../interfaces/pokemon-img';
 })
 export class IndexComponent {
   public data : Pokemon[] = [];
-  public pokemon2!: Pokemon;
+  public pokemonName: string='';
+  public pokemon2Sp: string='';
+  public pokemonTipo: string='';
   public i= Math.floor(Math.random() * 11);
   public url: string="";
   public listUrls: string[]=[];
@@ -35,17 +37,29 @@ export class IndexComponent {
     this.dataProvider.getResponse().subscribe((response) => { 
       let dataArray = (response as Pokemon[]); 
       this.data = dataArray.slice(0,10);
+
+      this.pokemonName = this.data[this.i].name;
+      this.pokemon2Sp = this.data[this.i].sp_attack;
+      this.pokemonTipo = this.data[this.i].type2;
+      
       this.data=this.data.filter(pokemon=>pokemon.name==="Fushigidaneフシギダネ");
+
+      
     })
+
+
   }  
 
-  randomPokemon(): Pokemon{ 
-    this.dataProvider.getResponse().subscribe((response) => { 
-      let dataArray = (response as Pokemon[]); 
-      this.pokemon2 = dataArray[this.i];
-      }
-    );
-    return this.pokemon2;
+  randomPokemonNombre(): string{ 
+      return this.pokemonName;
+    }
+
+   randomPokemonSpAttack(): string{ 
+      return this.pokemon2Sp;
+    }
+
+    randomPokemonTipo(): string{ 
+      return this.pokemonTipo;
     }
 
     
