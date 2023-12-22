@@ -23,8 +23,8 @@ export class BibliotecaComponent {
   ngOnInit() {
     this.dataProvider.getResponse().subscribe((response) => { 
       let dataArray = (response as Pokemon[]); 
-      this.data = dataArray.slice(0,10);
-      console.log(dataArray.slice(0,10));
+      this.data = dataArray.slice(0,15);
+      console.log(dataArray.slice(0,15));
   
     })
     
