@@ -1,0 +1,47 @@
+#pokemon{
+    height:60px;
+    width: 60px;
+}
+
+#pokemonDelDia, #contribuciones{
+    color: white;
+}
+
+#imagenDataset{
+    width: 250px;
+    height: 200px;
+}
+
+
+.figure{
+    max-width: 4rem;
+}
+
+
+
+
+#fotos{
+    height: 50%;
+    width: 50%;
+}
+
+#contributions{
+    width: 46.8rem;
+    height: 250px;
+}
+
+#foto{
+    width: 0.5rem;
+}
+
+#cardPokemon{
+    max-width: 250px;
+}
+
+#cardContributions{
+    width: 35%;
+}
+
+td, th{
+    text-align: center;
+}
