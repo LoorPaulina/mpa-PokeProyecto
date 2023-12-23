@@ -41,12 +41,12 @@ export class IndexComponent {
   ngOnInit() {
     this.dataProvider.getResponse().subscribe((response) => { 
       let dataArray = (response as Pokemon[]); 
-<<<<<<< HEAD
+
       this.data = dataArray.slice(0,20);
       
       this.data=this.data.filter(pokemon=>pokemon.name==="Fushigidaneフシギダネ");
       console.log(dataArray.slice(0,20));
-=======
+
       this.data = dataArray.slice(0,10);
 
       this.pokemonName = this.data[this.i].name;
@@ -54,7 +54,7 @@ export class IndexComponent {
       this.pokemonTipo = this.data[this.i].type2;
 
       /*this.data=this.data.filter(pokemon=>pokemon.name==="Fushigidaneフシギダネ");*/
->>>>>>> 85600c17d233e198c52113559310e7dd3628dc7d
+
     })
 
 
