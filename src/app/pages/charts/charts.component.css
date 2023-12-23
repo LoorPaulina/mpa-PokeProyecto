@@ -1,0 +1,18 @@
+
+.progres_container {
+    width: 100%; /* Ancho completo del contenedor padre */
+    position: relative; /* Permite posicionar la barra de progreso */
+    color:green
+}
+
+.progres_container > progress {
+    width: 100%; /* Ancho completo del contenedor padre */
+}
+#pie-chart {
+    width: 400px;
+    height: 300px;
+  }
+
+  .progress-bar {
+    background-color: purple; /* Cambia el color aquí */
+  }

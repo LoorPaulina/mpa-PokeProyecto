@@ -1,11 +1,9 @@
 <div class="main-panel">
     <div class="content-wrapper">
       <div class="page-header">
-        <h3 class="page-title"> Chart-js </h3>
+        <h3 class="page-title"> Poke-Graficos </h3>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Charts</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Chart-js</li>
           </ol>
         </nav>
       </div>
@@ -13,16 +11,62 @@
         <div class="col-lg-6 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Line chart</h4>
-              <canvas id="lineChart"></canvas>
+              <h4 class="card-title">Ataque</h4>
+              
+              @for (datum of data; track datum.pokedex_number){
+                <label for="nombre_pokemon" style="color: white;">{{datum.percentage_male}}</label>
+                <div class="progres_container">
+                <progress name=pokemon value={{datum.attack}} max="1" height="20" color="green"></progress>
+                </div>
+                <br>
+              }
+
+            </div> </div>
+          
+        </div>
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Puntos de vida </h4>
+              @for (datum of data; track datum.pokedex_number){
+                <label for="nombre_pokemon" style="color: white;">{{datum.percentage_male}}</label>
+                <div class="progres_container">
+                <progress name=pokemon value={{datum.hp}} max="3" height="20" color="green"></progress>
+                </div>
+                <br>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Velocidad</h4>
+              @for (datum of data; track datum.pokedex_number){
+                <label for="nombre_pokemon" style="color: white;">{{datum.percentage_male}}</label>
+                <div class="progres_container">
+                <progress name=pokemon value={{datum.speed}} max="150" height="20" color="green"></progress>
+                </div>
+                <br>
+              }
             </div>
           </div>
         </div>
         <div class="col-lg-6 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Bar chart</h4>
-              <canvas id="barChart"></canvas>
+              <h4 class="card-title">Fairy slayer</h4>
+              @for (datum of data; track datum.pokedex_number){
+                <label for="nombre_pokemon" style="color: white;">{{datum.percentage_male}}</label>
+                <div class="progres_container">
+                <progress name=pokemon value={{datum.against_fairy}} max="3" height="20" color="green"></progress>
+                </div>
+                <br>
+              }
             </div>
           </div>
         </div>
@@ -31,34 +75,28 @@
         <div class="col-lg-6 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Area chart</h4>
-              <canvas id="areaChart"></canvas>
+              <h4 class="card-title">Velocidad de ataque</h4>
+              @for (datum of data; track datum.pokedex_number){
+                <label for="nombre_pokemon" style="color: white;">{{datum.percentage_male}}</label>
+                <div class="progres_container">
+                <progress name=pokemon value={{datum.sp_attack}} max="14" height="20" color="green"></progress>
+                </div>
+                <br>
+              }
             </div>
           </div>
         </div>
         <div class="col-lg-6 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Doughnut chart</h4>
-              <canvas id="doughnutChart"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 grid-margin stretch-card">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Pie chart</h4>
-              <canvas id="pieChart"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 grid-margin stretch-card">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Scatter chart</h4>
-              <canvas id="scatterChart"></canvas>
+              <h4 class="card-title">Nivel competitivo </h4>
+              @for (datum of data; track datum.pokedex_number){
+                <label for="nombre_pokemon" style="color: white;">{{datum.percentage_male}}</label>
+                <div class="progres_container">
+                <progress name=pokemon value={{datum.capture_rate}} max="500" height="20" color="green"></progress>
+                </div>
+                <br>
+              }
             </div>
           </div>
         </div>
