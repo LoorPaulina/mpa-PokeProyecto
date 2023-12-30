@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-import { BuscadorComponent } from '../../shared/buscador/buscador.component';
 import { Pokemon } from '../../interfaces/pokemon';
 import { HttpClientModule } from '@angular/common/http';
 import { BuscaPokemonService } from '../../providers/busca-pokemon.service';
@@ -11,7 +10,7 @@ import { BuscaPokemonService } from '../../providers/busca-pokemon.service';
 @Component({
   selector: 'app-charts',
   standalone: true,
-  imports: [BuscadorComponent,HttpClientModule],
+  imports: [HttpClientModule],
   templateUrl: './charts.component.html',
   styleUrl: './charts.component.css',
   providers: [BuscaPokemonService]

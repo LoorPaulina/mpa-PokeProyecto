@@ -1,7 +1,23 @@
 <div class="main-panel">
-    <app-buscador></app-buscador>
+    <nav class="navbar p-0 fixed-top d-flex flex-row">
+        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+          
+          <ul class="navbar-nav w-100">
+            <li class="nav-item w-100">
+              
+                <input type="text"  [(ngModel)]="valorInput" class="form-control todo-list-input" placeholder="Ingresa para buscar pokemones por tipo">
+             
+              
+            </li>
+            {{filtrarElementos(valorInput)}}
+          </ul>
+    
+          
+        </div>
+      </nav>
+      
         <div class="cards_conts">
-            @for (datum of data; track datum.pokedex_number) {
+            @for (datum of datosFiltrados; track datum.pokedex_number) {
                 <div class="flip-card">
                    <div class="flip-card-inner">
                        <div class="flip-card-front">
@@ -37,6 +53,8 @@
                                    </div>
                    </div>
                 </div>
+                }@empty{
+                    <h1>no hay resultados para la busqueda</h1>
                 }
         
           
